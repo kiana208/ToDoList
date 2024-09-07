@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="./assets/sass/vendors/bootstrap-5.3.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/font.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="header-title">TODO</h2>
+      <form class="add-todo d-flex justify-content-between gap-3">
+        <input
+          type="text"
+          name="add-todo"
+          id="newTodoInput"
+          class="add-todo-input flex-grow-1"
+          placeholder="Write Your New Todo"
+        />
+        <button type="submit" class="submit-btn">Add</button>
+      </form>
+      <div class="todos-list-section mt-4">
+        <ul class="todos-list list-unstyled d-flex flex-column gap-3"></ul>
+      </div>
+    </div>
+    <div class="modal-content">
+      <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="editModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <input type="text" class="edit-input" />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/sass/vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
